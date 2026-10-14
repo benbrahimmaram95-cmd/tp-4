@@ -22,7 +22,6 @@
         </ul>
     </header>
         <!-- 2 liens d'action(Contact) -->
-         id="contact">
             <h2>Contactez-nous</h2>
             <p>
                 Pour toute question, vous pouvez nous joindre par e-mail :
@@ -55,18 +54,25 @@
         <section id="medias">:
            
             <video controls preload="metadata" poster="assets/images/poster.jpg."width="640"playsiline>
-                    <!--Format mp4-->
+                    <!--1.Format mp4-->
                     <source src="assets/video/presentation.mp4"type="video/mp4">
-                    <!--Format Webm-->
+                    <!--2.Format Webm-->
                     <source src="assets/video/presentation.webm"type="video/webm">
-                    <!--solution de repli pour les navigateurs obsèltes-->
+                    <!--3.solution de repli pour les navigateurs obsèltes-->
                     votre navigateur ne supporte pas l'élement vidéo.
             </video>
+            <audio controls preload="metadata"loop>
+                <!--1-Format MP3-->
+                <source src="assets/audio/podcast.mp3"type="audio/mpeg">
+                <!--2.Format ogg-->
+                <source src="assets/audio/podcast.ogg"type="audio/ogg">
+                <!--3.Solution de repli pour les navigateurs-->
+                votre navigateur ne support pas l'élément.
+                vous pouvez <a href="media/audio/podcast.mp3">télécharger le fichier audio directement</a>
+            </audio>
 
         </section>
     </main>
-
-
     <footer>
         <!-- 3. Lien d'ancre intra-page (Retour en haut) -->
         <p><a href="#top">Remonter en haut de la page</a></p>
