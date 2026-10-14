@@ -5,87 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploration des Médias et Liens en HTML5</title>
 
-    <style>
-        body {
-            font-family: "Times New Roman", serif;
-            background-color: #fff;
-            margin: 20px;
-        }
-
-        .container {
-            border: 2px solid #ccc;
-            padding: 20px;
-            width: 420px;
-            min-height: 450px;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-top: 0;
-        }
-
-        h2 {
-            font-size: 24px;
-        }
-
-        ul {
-            padding-left: 25px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        a {
-            color: #555;
-        }
-
-        .copyright {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <nav class="container">
+    </head>
+    <body> 
+        <header>
 
         <h1>Exploration des Médias et Liens en HTML5</h1>
-
+        <nav>
         <ul>
+            <!-- 1.Navigation principale -->
             <li><a href="index.html">Accueil</a></li>
             <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="images.html">Images &amp; Adaptabilité</a></li>
-            <li><a href="audio.html">Audio &amp; Vidéo</a></li>
+            <li><a href="#images">Images &amp; Adaptabilité</a></li>
+            <li><a href="#audio">Audio &amp; Vidéo</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://developer.mozilla.org/">Doc MDN (Externe)</a></li>
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">Doc MDN (Externe)</a></li>
         </ul>
+    </header>
+        <!-- 2 liens d'action(Contact) -->
+         id="contact">
+            <h2>Contactez-nous</h2>
+            <p>
+                Pour toute question, vous pouvez nous joindre par e-mail :
+                     <a href="mailto:support@exemple.com?subject=Demande%20d'information">support@exemple.com</a>
+            </p>
+            <p>
+                Ou directement par téléphone : 
+                <a href="tel:+21600000000">+216 00 000 000</a>
+            </p>
+        </nav>
+        </section>
+        <section id="images">
+            <img src="assets/images/paysage.jpg" alt="payesage">
+            <picture>
+               <picture>
+        <!-- 1. pour les écrans de largeur superieur ou égale à 1024px -->
+            <source media="(min-width: 1024px)" srcset="banniere-large.jpg" type="image/avif">
 
-        <h2 id="contact">Contactez-nous</h2>
+        <!-- 2. pour les écrans de largeur superieur ou égale à 768px -->
+             <source media="(min-width: 768px)" srcset="banniere-medium.jpg" type="image/webp">
+       <!-- 3. pour les écrans mobiles-->
+        <img src="écrans-mobile.jpg"
+         alt="Image rélative adaptive"
+         width="1200"
+         height="500"
+         loading="lazy">
+        </picture>
+            </picture>
+        </section>
+        <section id="medias">:
+           
+            <video controls preload="metadata" poster="assets/images/poster.jpg."width="640"playsiline>
+                    <!--Format mp4-->
+                    <source src="assets/video/presentation.mp4"type="video/mp4">
+                    <!--Format Webm-->
+                    <source src="assets/video/presentation.webm"type="video/webm">
+                    <!--solution de repli pour les navigateurs obsèltes-->
+                    votre navigateur ne supporte pas l'élement vidéo.
+            </video>
 
-        <p>
-            Pour toute question, vous pouvez nous joindre par e-mail :
-            <a href="mailto:support@exemple.com">
-                support@exemple.com
-            </a>
-        </p>
+        </section>
+    </main>
 
-        <p>
-            Ou directement par téléphone :
-            <a href="tel:+21671000000">
-                +216 71 000 000
-            </a>
-        </p>
 
-        <p>
-            <a href="#top">↑ Remonter en haut de la page</a>
-        </p>
-
-        <p class="copyright">
-            © 2026 - Cours Web HTML5
-        </p>
-
-    </nav>
+    <footer>
+        <!-- 3. Lien d'ancre intra-page (Retour en haut) -->
+        <p><a href="#top">Remonter en haut de la page</a></p>
+        <p>&copy; 2026 - Cours Web HTML5</p>
+    </footer>
 
 </body>
 </html>
+                    
